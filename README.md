@@ -119,3 +119,5 @@ And vice verse axis=1 is equivalent to axis='columns', and you get the mean of e
 - `pandas_df_name.apply(function_name)` applies function to a column of the dataframe. Can use axis=1 to apply to a row of the dataframe
 
 https://stackoverflow.com/questions/17071871/select-rows-from-a-dataframe-based-on-values-in-a-column-in-pandas 
+https://stackoverflow.com/questions/38287621/pandas-summarize-table-based-on-column-value
+https://stackoverflow.com/questions/15411158/pandas-countdistinct-equivalent
