@@ -117,3 +117,5 @@ And vice verse axis=1 is equivalent to axis='columns', and you get the mean of e
 - To easily create buckets in dataframes. Say we have a dataframe with exam grades and want to create grades based on these.
 `pd.qcut(pandas_df_name, [0, 0.1, 0.2, 0.5, 0.8, 1], labels=['F', 'D', 'C', 'B', 'A'])`
 - `pandas_df_name.apply(function_name)` applies function to a column of the dataframe. Can use axis=1 to apply to a row of the dataframe
+
+https://stackoverflow.com/questions/17071871/select-rows-from-a-dataframe-based-on-values-in-a-column-in-pandas 
