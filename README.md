@@ -102,10 +102,7 @@ Series is one-dimensional. When we have mulitple series, we have a Pandas DataFr
 - `pandas_df_name.loc['index_name', 'header_name']`
 - To select one column: `pandas_df_name.['header_name']`
 - To select multiple columns: `pandas_df_name.[['header1_name', 'header2_name]]`
-- To drop na in once column named price in the dataframe df:
-  `df.dropna(subset=["price"], axis=0)`
-  To drop all rows that have a NaN, use `df.dropna(axis=0)`
-  To drop all columns that have a NaN, use `df.dropna(axis=1)`
+
 - To rename the headers of a dataframe, df:
   `df.columns = ['header1', 'header2', 'header3']`
 - `pandas_df_name.values` - returns a 2-D numpy array - Useful if you want mean() of all values, etc
@@ -116,6 +113,18 @@ Series is one-dimensional. When we have mulitple series, we have a Pandas DataFr
 - Instead of axis=0, you can use axis='index', which means summarising along the index, or in other words, you get the mean of the column.
 And vice verse axis=1 is equivalent to axis='columns', and you get the mean of each row
 
+
+#### Removing missing values in a dataframe/ series
+- To drop na in once column named price in the dataframe df:
+  `df.dropna(subset=["price"], axis=0)`
+- To drop all rows that have a NaN, use `df.dropna(axis=0)`
+- To drop all columns that have a NaN, use `df.dropna(axis=1)`
+- Use pandas_series_name.dropna() to drop NaNs, and fillna(0) to fill NaNs with 0
+All of these do not edit the original dataframe, and return a dataframe after performing the operation. If you'd like to perform the operation on the original datframe, pass argument `inplace = True`.
+- One can use function replace to replace with some value. Usage:
+`df['column-name'].replace(np.nan, 0)`
+  
+  
 #### Saving a dataset
 `df.to_csv("automobile.csv", index=False)`
 There are also other methods such as to_json, to_excel, to_sql.
