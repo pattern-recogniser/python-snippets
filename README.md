@@ -123,14 +123,20 @@ And vice verse axis=1 is equivalent to axis='columns', and you get the mean of e
 All of these do not edit the original dataframe, and return a dataframe after performing the operation. If you'd like to perform the operation on the original datframe, pass argument `inplace = True`.
 - One can use function replace to replace with some value. Usage:
 `df['column-name'].replace(np.nan, 0)`
+
+#### Data formatting a dataframe
+Use `df.dtypes` to check the data types of each column in a dataframe.
+- To rename a column:
+`df.rename(columns = {'old_name':'new_name'}, inplace = True)`
+- To convert from one type to another:
+`df['column_name'] = df['column_name].astype('int')`
   
+#### Binning and creating dummy variables
+
   
 #### Saving a dataset
 `df.to_csv("automobile.csv", index=False)`
 There are also other methods such as to_json, to_excel, to_sql.
-
-#### Checking data types of all columns in df
-`df.dtypes`
 
 #### Statistical summary of all columns
 `df.describe()` gives summary of all numeric columns
