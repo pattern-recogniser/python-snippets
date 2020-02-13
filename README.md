@@ -114,6 +114,10 @@ Series is one-dimensional. When we have mulitple series, we have a Pandas DataFr
 - Instead of axis=0, you can use axis='index', which means summarising along the index, or in other words, you get the mean of the column.
 And vice verse axis=1 is equivalent to axis='columns', and you get the mean of each row
 
+#### Saving a dataset
+`df.to_csv("automobile.csv", index=False)`
+There are also other methods such as to_json, to_excel, to_sql.
+
 #### Other useful points
 - When adding 2 dataframes, the index name and the column name should match for the numbers to add up. If there is no corresponding index/column combination, `NaN`s are produced
 - Dataframes have the functions `pandas_df_name.add(), sub(), div(), mul()`. In these you can specify parameters like axis=0 to perform row-wise/ column-wise additions. Another available useful option is fill_value=0, which fills `NaN` with 0
