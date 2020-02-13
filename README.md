@@ -104,6 +104,8 @@ Series is one-dimensional. When we have mulitple series, we have a Pandas DataFr
 - To select multiple columns: `pandas_df_name.[['header1_name', 'header2_name]]`
 - To drop na in once column named price in the dataframe df:
   `df.dropna(subset=["price"], axis=0)`
+  To drop all rows that have a NaN, use `df.dropna(axis=0)`
+  To drop all columns that have a NaN, use `df.dropna(axis=1)`
 - To rename the headers of a dataframe, df:
   `df.columns = ['header1', 'header2', 'header3']`
 - `pandas_df_name.values` - returns a 2-D numpy array - Useful if you want mean() of all values, etc
