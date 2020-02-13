@@ -102,6 +102,10 @@ Series is one-dimensional. When we have mulitple series, we have a Pandas DataFr
 - `pandas_df_name.loc['index_name', 'header_name']`
 - To select one column: `pandas_df_name.['header_name']`
 - To select multiple columns: `pandas_df_name.[['header1_name', 'header2_name]]`
+- To drop na in once column named price in the dataframe df:
+  `df.dropna(subset=["price"], axis=0)`
+- To rename the headers of a dataframe, df:
+  `df.columns = ['header1', 'header2', 'header3']`
 - `pandas_df_name.values` - returns a 2-D numpy array - Useful if you want mean() of all values, etc
 - `pandas_df_name.describe()` gives a summary of each column of the pandas dataframe
 - `pandas_df_name.corrcoef()` - use to get the correlation coefficient
