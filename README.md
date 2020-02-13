@@ -118,6 +118,13 @@ And vice verse axis=1 is equivalent to axis='columns', and you get the mean of e
 `df.to_csv("automobile.csv", index=False)`
 There are also other methods such as to_json, to_excel, to_sql.
 
+#### Checking data types of all columns in df
+`df.dtypes`
+
+#### Statistical summary of all columns
+`df.describe()` gives summary of all numeric columns
+`df.describe(include = "all")` gives summary of all cokumns, both numeric and non-numeric. Wherever a summary statisitic not application, there will be NaN (Not a Number)
+
 #### Other useful points
 - When adding 2 dataframes, the index name and the column name should match for the numbers to add up. If there is no corresponding index/column combination, `NaN`s are produced
 - Dataframes have the functions `pandas_df_name.add(), sub(), div(), mul()`. In these you can specify parameters like axis=0 to perform row-wise/ column-wise additions. Another available useful option is fill_value=0, which fills `NaN` with 0
